@@ -1,26 +1,28 @@
 import { Injectable } from '@nestjs/common';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { UpdateTodoDto } from './dto/update-todo.dto';
-import { Todo } from './entities/todo.entity';
-import { TodoStatus } from 'src/enums/todo-status.enum';
+import { TodoEntity } from './entities/todo.entity';
+import { TodoStatusEnum } from 'src/enums/todo-status.enum';
+import { randomUUID } from 'crypto';
 
 @Injectable()
 export class TodoService {
-  todo: Todo;
+  todo: TodoEntity;
 
   constructor() {
     this.todo = {
+      id: randomUUID(),
       title: 'title example 1',
       description: 'description example 1',
-      status: TodoStatus.IN_PROGESS,
+      status: TodoStatusEnum.IN_PROGESS,
     };
   }
 
-  create(todo: CreateTodoDto): Todo {
-    return todo;
+  create(todo: CreateTodoDto): TodoEntity {
+    return this.todo;
   }
 
-  findAll(): Todo[] {
+  findAll(): TodoEntity[] {
     return [this.todo, this.todo];
   }
 
