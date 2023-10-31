@@ -1,5 +1,5 @@
 import { IsEnum, IsNotEmpty, IsString } from 'class-validator';
-import { TodoStatus } from 'src/enums/todo-status.enum';
+import { TodoStatusEnum } from 'src/enums/todo-status.enum';
 
 export class UpdateTodoDto {
   /**
@@ -22,7 +22,7 @@ export class UpdateTodoDto {
    * Aqui será inserido o status da tarefa (se é todo, in progress, finalized)
    * @example "in progress"
    */
-  @IsEnum(TodoStatus)
+  @IsEnum(TodoStatusEnum)
   @IsNotEmpty()
   status: string;
 }

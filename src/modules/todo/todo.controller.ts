@@ -27,8 +27,8 @@ export class TodoController {
   @ApiOperation({ summary: 'Criação de uma nova tarefa' })
   @ApiCreatedResponse({ description: 'Retorna tarefa criada com sucesso' })
   @Post()
-  create(@Body() createTodoDto: CreateTodoDto) {
-    return this.todoService.create(createTodoDto);
+  create(@Body() todo: CreateTodoDto) {
+    return this.todoService.create(todo);
   }
 
   @ApiOperation({ summary: 'Listagem de todas as tarefas registradas' })
