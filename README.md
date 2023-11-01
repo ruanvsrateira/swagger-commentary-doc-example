@@ -1,7 +1,7 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 
 <p align="center">
-  <img style="margin: auto" src="https://tgoo.world/images/tgoo.png" width="200" alt="TGOO Logo" />
+  <img style="margin: auto" src="https://static1.smartbear.co/swagger/media/assets/images/swagger_logo.svg"  alt="TGOO Logo" />
 </p>
 
 <br />
